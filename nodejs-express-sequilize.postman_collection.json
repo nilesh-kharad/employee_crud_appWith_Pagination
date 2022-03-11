@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "3225cce8-2a3e-4202-be14-2024f2e1566f",
+		"name": "nodejs-express-sequilize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"anurag andil\",\n    \"address\": \"aurangabad, Maharashtra 431122\",\n    \"company\": \"AGPL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/employee/"
+			},
+			"response": []
+		},
+		{
+			"name": "Find all and find by name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"tilak Sanap\",\n    \"Address\": \"aurangabad, Maharashtra 431122\",\n    \"company\": \"AGPL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/employee?name=heer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employee"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "heer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all by Pagination",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"tilak Sanap\",\n    \"Address\": \"aurangabad, Maharashtra 431122\",\n    \"company\": \"AGPL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/employee?page=2&size=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employee"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find One",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"tilak Sanap\",\n    \"Address\": \"aurangabad, Maharashtra 431122\",\n    \"company\": \"AGPL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/employee/1"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"mahima Sanap\",\n    \"address\": \"aurangabad, Maharashtra 431122\",\n    \"company\": \"AGPL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/employee/1"
+			},
+			"response": []
+		},
+		{
+			"name": "update Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"mahima Sanap\",\n    \"address\": \"aurangabad, Maharashtra 431122\",\n    \"company\": \"AGPL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/employee/1"
+			},
+			"response": []
+		},
+		{
+			"name": "delete ALL",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"mahima Sanap\",\n    \"address\": \"aurangabad, Maharashtra 431122\",\n    \"company\": \"AGPL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/employee/"
+			},
+			"response": []
+		}
+	]
+}
